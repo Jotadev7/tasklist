@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    <h1 class="alert-heading">To do List</h1>
+    <hr>
+    <h3>The best way to do something.</h3>
+  </div>
+  <ul class="list-group">
+    <li *ngFor="let task of tasks" class="list-group-item">
+      {{task}} | <button (click)="removeTarefa(task)" class="btn btn-danger">Remover</button></li>
+  </ul>
+
+  <hr>
+
+  <div class="form-group">
+    <label>Titulo da tarefa</label>
+    <input type="text" [(ngModel)]="tarefa" class="form-control"> <br>
+  </div>
+
+  <button (click)="addTarefa()" class="btn btn-primary">Adicionar</button>
+
+</div>
